@@ -1,0 +1,60 @@
+.subscribe {
+    margin-left: 23px;
+
+    &-text {
+        @include font-props(700, 14px, 1.14);
+        font-style: normal;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        color: $basic-white;
+    }
+
+    &-form {
+        display: flex;
+        gap: 12px;
+    }
+
+    &-input {
+        @include font-props(400, 16px, 1.25);
+
+        width: 358px;
+        height: 50px;
+        padding-left: 16px;
+
+        border: 1px solid $mail-input-grey;
+        border-radius: 4px;
+        outline: transparent;
+        filter: drop-shadow(0px 4px 4px $modal-button-shadow-color);
+
+        color: $footer-contacts-soft-grey;
+        background-color: transparent;
+    }
+
+    &-input::placeholder {
+        @include font-props(400, 16px, 1.25);
+        color: $footer-contacts-soft-grey;
+    }
+
+    &-button {
+        @include font-props(700, 16px, 1.9);
+        letter-spacing: 0.06em;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        height: 50px;
+        padding-left: 28px;
+        padding-right: 28px;
+
+        border: none;
+        border-radius: 4px;
+
+        color: $basic-white;
+        background-color: $accent-color;
+
+        cursor: pointer;
+        box-shadow: 0px 4px 4px $modal-button-shadow-color;
+    }
+}

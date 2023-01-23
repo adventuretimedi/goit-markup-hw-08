@@ -1,0 +1,11 @@
+@mixin font-props($weight, $size, $lh) {
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $lh;
+}
+
+@mixin transition-cubic($property) {
+ transition-property: $property;
+ transition-duration: 250ms;
+ transition-timing-function: $cubic;
+}

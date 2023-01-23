@@ -1,0 +1,48 @@
+.footer {
+    background-color: $background-grey;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    &-location {
+        text-decoration: none;
+        font-size: 14px;
+        line-height: 1.7;
+        color: $basic-white;
+    }
+    
+    &-contacts {
+        display: flex;
+        flex-direction: column;
+        gap: 9px;
+        padding-left: 0;
+        margin-top: 20px;
+    
+        font-style: normal;
+    }
+    
+    &-mail,
+    &-phone {
+        @include transition-cubic(color);
+        @include font-props(400, 14px, 1.7);
+        letter-spacing: 0.02em;
+        
+        display: flex;
+        text-decoration: none;
+    
+        color: $footer-contacts-soft-grey;
+    }
+
+    &-mail:hover,
+    &-mail:focus,
+    &-phone:hover,
+    &-phone:focus {
+        color: $accent-color;
+    }
+}
+
+.container-footer {
+    display: flex;
+    gap: 70px;
+    align-items: baseline;
+    justify-content: space-between;
+}

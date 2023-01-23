@@ -1,0 +1,15 @@
+.logo {
+    @include font-props(700, 26px, 1.2);
+    font-family: $font-logo;
+    text-decoration-line: none;
+
+    color: $accent-color;
+
+    &--header {
+        color: $title-text-color;
+    }
+    
+    &--footer {
+        color: $basic-white;
+    }
+}

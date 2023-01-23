@@ -1,0 +1,32 @@
+.advantages {
+    &__list {
+        display: flex;
+        gap: 30px;
+        padding: 0;
+        margin: 0;
+        margin: 0px;
+    }
+
+    &__name {
+        font-size: 14px;
+        line-height: 1.14;
+        margin-top: 30px;
+        margin-bottom: 10px;
+        color: $title-text-color;
+    }
+
+    &__icon-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 270px;
+        height: 120px;
+        border-radius: 4px;
+        background-color: #f5f4fa;
+    }
+
+    &__text {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+}

@@ -1,0 +1,31 @@
+.about {
+    padding-top: 0;
+
+    &-box {
+        position: relative;
+    }
+
+    &-list {
+        display: flex;
+        gap: 30px;
+        padding: 0;
+        margin: 0;
+        margin: 0px;
+    }
+
+    &-header {
+        @include font-props(700, 14px, 1.2);
+
+        position: absolute;
+        text-transform: uppercase;
+        text-align: center;
+
+        color: $about-header-color;
+        background-color: $about-header-bg-color;
+        width: 100%;
+        left: 0px;
+        bottom: 0px;
+        padding-top: 27px;
+        padding-bottom: 27px;
+    }
+}
