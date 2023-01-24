@@ -1,37 +1,130 @@
 .hero {
-    padding-top: 200px;
-    padding-bottom: 200px;
-    text-align: center;
+  padding-top: 118px;
+  padding-bottom: 118px;
+  max-width: 480px;
+  margin-right: auto;
+  margin-left: auto;
 
+  text-align: center;
+  background-color: $background-grey;
+  background-image: $hero-gradient, url(../images/hero-bg-mob1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+   @include retina {
+    background-image: $hero-gradient, url(../images/hero-bg-mob2x-min.jpg);
+    }
+    
+
+  @include tablet {
+    background-image: $hero-gradient, url(../images/hero-bg-tab-2x-min.jpg);
+    padding-top: 118px;
+    padding-bottom: 118px;
+    max-width: 768px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
     background-color: $background-grey;
-    background-image: $hero-gradient, url(../images/hero-bg.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    max-width: 1600px;
+    @include retina {
+     background-image: $hero-gradient, url(../images/hero-bg-tab-2x-min.jpg);
+            
+        }
+  }
+
+  @include desktop {
+    background-image: $hero-gradient, url(../images/hero-bg.jpg);
+    padding-top: 200px;
+    padding-bottom: 200px;
+    max-width: 1200px;
+    text-align: center;
+    background-color: $background-grey;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    @include retina {
+    background-image: $hero-gradient, url(../images/hero-bg-desk2x-min.jpg);
+            
+        }
+  }
+
+  &__title {
+    // mob first
+    @include font-props(900, 26px, 1.6);
+    width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    color: $basic-white;
+    text-transform: uppercase;
+  }
+
+  @include tablet {
+    @include font-props(900, 26px, 1.6);
+    width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    color: $basic-white;
+    text-transform: uppercase;
+  }
+
+  @include desktop {
+    @include font-props(900, 44px, 1.36);
+    width: 696px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+
+    color: $basic-white;
+    text-transform: uppercase;
+  }
+
+
+&__button {
+  @include font-props(700, 16px, 1.9);
+  letter-spacing: 0.06em;
+
+  display: block;
+  margin: auto;
+  padding: 10px 24px;
+
+  border: none;
+  border-radius: 4px;
+
+  background-color: $accent-color;
+  color: $basic-white;
+
+  @include tablet {
+    @include font-props(700, 16px, 1.9);
+    letter-spacing: 0.06em;
+
+    display: block;
     margin: auto;
-    &__title {
-        @include font-props(900, 44px, 1.36);
-        width: 696px;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 30px;
-    
-        color: $basic-white;
-        text-transform: uppercase;
-    }
-    &__button {
-        @include font-props(700, 16px, 1.9);
-        letter-spacing: 0.06em;
-        
-        display: block;
-        margin: auto;
-        padding: 10px 32px;
-        
-        border: none;
-        border-radius: 4px;
-    
-        background-color: $accent-color;
-        color: $basic-white;
-    }
+    padding: 10px 24px;
+
+    border: none;
+    border-radius: 4px;
+
+    background-color: $accent-color;
+    color: $basic-white;
+  }
+
+  @include desktop {
+    @include font-props(700, 16px, 1.9);
+    letter-spacing: 0.06em;
+
+    display: block;
+    margin: auto;
+    padding: 10px 32px;
+
+    border: none;
+    border-radius: 4px;
+
+    background-color: $accent-color;
+    color: $basic-white;
+  }
+}
 }
