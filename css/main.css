@@ -97,6 +97,10 @@ ul {
   color: #ffffff;
 }
 
+.container--header .logo {
+  padding: 16px 0;
+}
+
 header {
   border-bottom: 1px solid #ececec;
 }
@@ -190,17 +194,20 @@ header {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   font-weight: 500;
   font-size: 12px;
-  line-height: 1.2;
+  line-height: 1.1;
   letter-spacing: 0.02em;
   display: flex;
-  -moz-column-gap: 12px;
-       column-gap: 12px;
+  align-items: center;
+  -moz-column-gap: 8px;
+       column-gap: 8px;
   text-decoration: none;
   color: #757575;
 }
 @media screen and (min-width: 1200px) {
   .header-contacts__link {
     font-size: 14px;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
   }
 }
 .header-contacts__link:hover, .header-contacts__link:focus {
@@ -280,6 +287,9 @@ header {
 .menu__link:focus {
   color: rgb(33, 150, 243);
 }
+.menu__link--current {
+  color: #2196f3;
+}
 
 .menu__item:not(:last-child) {
   margin-bottom: 32px;
@@ -325,16 +335,10 @@ header {
 
 .menu-contacts__phone {
   font-weight: 500;
-  font-size: 34px;
+  font-size: 28px;
   line-height: 1.17;
   color: rgb(33, 150, 243);
   text-decoration: none;
-}
-
-@media screen and (min-width: 768px) {
-  .mob-menu {
-    display: none;
-  }
 }
 
 .hero {
@@ -514,6 +518,11 @@ header {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .advantages__item:not(:last-child) {
+    margin-bottom: 30px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -876,9 +885,8 @@ header {
 .container-footer {
   display: flex;
   flex-direction: column;
-  gap: 60px;
-  align-items: center;
   justify-content: center;
+  gap: 60px;
 }
 @media screen and (min-width: 768px) {
   .container-footer {
@@ -961,11 +969,6 @@ header {
 
 .subscribe {
   width: 100%;
-}
-@media screen and (min-width: 768px) {
-  .subscribe {
-    align-self: center;
-  }
 }
 @media screen and (min-width: 1200px) {
   .subscribe {
@@ -1084,7 +1087,7 @@ header {
   background-color: rgb(255, 255, 255);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  width: 90vw;
+  width: 98vw;
 }
 @media screen and (min-width: 768px) {
   .modal {
@@ -1164,7 +1167,6 @@ header {
 .modal-field {
   margin-bottom: 10px;
 }
-
 .modal-field-top {
   margin-top: 20px;
 }
@@ -1243,32 +1245,31 @@ header {
   line-height: 1.2;
   display: flex;
   align-items: center;
+  justify-content: center;
+  gap: 8px;
   margin-top: 0;
-  gap: 4px;
   margin-bottom: 0;
   color: rgb(117, 117, 117);
 }
 @media screen and (min-width: 1200px) {
   .check-text {
     font-size: 14px;
-    line-height: 1.7px;
+    line-height: 1.7;
   }
 }
 
-.agreement-doc {
-  color: #2196f3;
-}
-
-.check-text span {
+.check-span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 16px;
   height: 15px;
-  margin-right: 5px;
-  border: 1px solid rgb(33, 33, 33);
+  border: 2px solid rgb(33, 33, 33);
   border-radius: 2px;
   content: "";
 }
 
-.modal-check:checked + .check-text span {
+.modal-check:checked + .check-text .check-span {
   background-color: #2196f3;
   border: none;
 }
@@ -1276,4 +1277,5 @@ header {
 .agreement-doc {
   -webkit-text-decoration-skip-ink: none;
           text-decoration-skip-ink: none;
+  color: #2196f3;
 }/*# sourceMappingURL=main.css.map */

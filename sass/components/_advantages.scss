@@ -11,6 +11,12 @@
     }
   }
 
+  &__item:not(:last-child) {
+    @include mobile {
+      margin-bottom: 30px;
+    }
+  }
+
   &__item {
     @include tablet {
       flex-basis: calc((100% - 30px) / 2);

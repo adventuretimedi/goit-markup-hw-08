@@ -19,7 +19,7 @@
     height: 100%;
   }
 
-  @media screen and (min-width: 768px) {
+  @include tablet {
     display: none;
   }
 }
@@ -32,7 +32,7 @@
   background-color: transparent;
   border: none;
 
-  @media screen and (min-width: 768px) {
+  @include tablet {
     display: none;
   }
 }
@@ -58,6 +58,10 @@
 
   &:focus {
     color: $mob-menu-tel-color;
+  }
+
+  &--current {
+    color: $accent-color;
   }
 }
  .menu__item:not(:last-child) {
@@ -95,13 +99,7 @@
  }
 
 .menu-contacts__phone {
-  @include font-props(500, 34px, 1.17);
+  @include font-props(500, 28px, 1.17);
   color: $mob-menu-tel-color;
   text-decoration: none;
-}
-
-.mob-menu {
-  @media screen and (min-width: 768px) {
-    display: none;
-  }
 }

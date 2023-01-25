@@ -88,17 +88,19 @@ header {
 
   &__link {
     @include transition-cubic(color);
-    @include font-props(500, 12px, 1.2);
+    @include font-props(500, 12px, 1.1);
     letter-spacing: 0.02em;
 
     display: flex;
-    column-gap: 12px;
+    align-items: center;
+    column-gap: 8px;
     text-decoration: none;
-
+    
     color: $primary-text-color;
-
+    
     @include desktop {
       font-size: 14px;
+      column-gap: 10px;
     }
   }
 

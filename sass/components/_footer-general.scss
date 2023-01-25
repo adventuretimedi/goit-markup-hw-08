@@ -47,9 +47,8 @@
 .container-footer {
     display: flex;
     flex-direction: column;
-    gap: 60px;
-    align-items: center;
     justify-content: center;
+    gap: 60px;
 
     @include tablet {
         flex-wrap: wrap;
