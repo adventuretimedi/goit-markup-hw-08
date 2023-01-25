@@ -3,6 +3,7 @@
 }
 
 .modal-field-top {
+ 
   margin-top: 20px;
 }
 .modal-title {
@@ -80,6 +81,7 @@
   @include font-props(400, 12px, 1.2);
 
   display: flex;
+  align-items: center;
   margin-top: 0;
   gap: 4px;
   margin-bottom: 0;
@@ -97,10 +99,6 @@
 }
 
 .check-text span {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
   width: 16px;
   height: 15px;
   margin-right: 5px;
