@@ -1,3 +1,4 @@
+
 header {
   border-bottom: 1px solid $header-border-grey;
 }
@@ -13,6 +14,10 @@ header {
   align-items: center;
   padding: 0;
   margin-left: 93px;
+
+  @include tablet {
+    display: flex;
+  }
 
   &__item:not(:last-child) {
     margin-right: 50px;
@@ -59,19 +64,31 @@ header {
 
 .header-contacts {
   display: none;
-  // display: block;
-  // display: flex;
   padding: 0;
   margin-left: auto;
   font-size: 14px;
 
-  &__item + &__item {
-    margin-left: 30px;
+  @include tablet {
+    display: block;
+  }
+  
+  @include desktop {
+    display: flex;
+  }
+
+  &__item+&__item {
+    @include tablet {
+      margin-top: 10px;
+    }
+    @include desktop {
+      margin-left: 30px;
+      margin-top: 0px;
+    }
   }
 
   &__link {
     @include transition-cubic(color);
-    @include font-props(500, 14px, 1.2);
+    @include font-props(500, 12px, 1.2);
     letter-spacing: 0.02em;
 
     display: flex;
@@ -79,6 +96,10 @@ header {
     text-decoration: none;
 
     color: $primary-text-color;
+
+    @include desktop {
+      font-size: 14px;
+    }
   }
 
   &__link:hover,
@@ -97,76 +118,3 @@ header {
   }
 }
 
-
-// mob menu
-.mob-menu {
-  position: fixed;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: $basic-white;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-  z-index: 5;
-  > .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-  }
-}
-
-.menu-open {
-display: block;
-display: block;
-margin-left: auto;
-background-color: transparent;
-border: none;
-}
-.menu-exit {
-background-color: transparent;
-border: none;
-display: block;
-margin-left: auto;
-margin-bottom: 30px;
-}
-
-.menu__link {
-  @include transition-cubic(color);
-  @include font-props(500, 40px, 1.17);
-  letter-spacing: 0.02em;
-  color: tomato;
-  
-  display: block;
-  // position: relative;
-  text-decoration: none;
-  // padding-top: 32px;
-  // padding-bottom: 32px;
-  color: $soft-black-color;
-}
-
-
-.mob-soc{
-  display: flex;
-  gap: 20px; 
-
-}
-.mob-soc__link {
- color: $mob-menu-tel-color;
- text-decoration: none;
-}
- 
-
-.menu-contacts__link {
-  @include font-props(500, 24px, 1.17);
-  text-decoration: none;
-  color: $check-text-color;
-}
-.menu-contacts__phone {
-  @include font-props(500, 34px, 1.17);
-  color: $mob-menu-tel-color;
-  text-decoration: none;
-}

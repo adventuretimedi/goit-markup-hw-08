@@ -1,19 +1,28 @@
 .section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @include desktop {
     padding-top: 94px;
     padding-bottom: 94px;
+  }
 
-    &-link {
-        color: $primary-text-color;
-        text-decoration: none;
-    }
+  &-link {
+    color: $primary-text-color;
+    text-decoration: none;
+  }
 
-    &-title {
-        margin-top: 0px;
-        margin-bottom: 50px;
-    
-        color: $title-text-color;
-        font-size: 36px;
-        line-height: 1.2;
-        text-align: center;
+  &-title {
+    margin-top: 0px;
+    margin-bottom: 30px;
+    font-size: 28px;
+    line-height: 1.2;
+    text-align: center;
+    color: $title-text-color;
+
+    @include desktop {
+      margin-bottom: 50px;
+      font-size: 36px;
     }
+  }
 }

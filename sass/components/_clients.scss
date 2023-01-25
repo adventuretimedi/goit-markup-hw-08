@@ -1,17 +1,25 @@
-// cпільний блок де? а нема. нема
-
 .clients {
   padding: 0;
   display: flex;
   gap: 30px;
   justify-content: center;
   text-align: center;
+  flex-wrap: wrap;
 
   &__item {
     display: flex;
     align-items: center;
     width: 170px;
     height: 92px;
+    flex-basis: calc((100% - 30px) / 2);
+
+    @include tablet {
+      flex-basis: calc((100% - 60px) / 3);
+    }
+
+    @include desktop {
+      flex-basis: calc((100% - 150px) / 6);
+    }
   }
   
   &__link {

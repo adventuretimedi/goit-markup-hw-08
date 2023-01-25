@@ -18,8 +18,7 @@
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
-    <!-- Header -->
-     <header>
+    <header>
       <div class="container container--header">
         <nav class="container--header">
           <a href="./index.html" class="logo">Web<span class="logo--header">Studio</span></a>
@@ -55,24 +54,21 @@
           </li>
         </ul>
         <button type="button" class="menu-open" data-menu-open>
-           <svg class="menu-open__icon----" width="40" height="40">
-             <use href="./images/icons.svg#menu_open"></use>
-           </svg>
-         </button>
-      </div>
-      <!-- кінець хедеру, new btn -->
-    <!-- mob menu -->
-    
-    <div class="mob-menu is-hidden container" data-menu>
-<div>
-  
-        <button type="button" class="menu-exit" data-menu-close>
-          <svg class="icon-exit">
-            <use href="./images/icons.svg#icon-exit"></use>
+          <svg class="menu-open__icon----" width="40" height="40">
+            <use href="./images/icons.svg#menu_open"></use>
           </svg>
         </button>
-      <ul class="menu">
-        <li class="menu__item">
+      </div>
+
+      <div class="mob-menu is-hidden container" data-menu>
+        <div>
+          <button type="button" class="menu-exit" data-menu-close>
+            <svg class="icon-exit">
+              <use href="./images/icons.svg#icon-exit"></use>
+            </svg>
+          </button>
+          <ul class="menu">
+            <li class="menu__item">
               <a href="./index.html" class="menu__link">Студія</a>
             </li>
             <li class="menu__item">
@@ -81,66 +77,47 @@
             <li class="menu__item">
               <a href="" class="menu__link">Контакти</a>
             </li>
-      </ul>
-</div>
-<div>
-        <ul class="menu-contacts">
-          <li class="menu-contacts__item">
-           <a href="tel.+380961111111" class="menu-contacts__phone">
-              +38 096 111 11 11
-            </a>
-          </li>
-          <li class="menu-contacts__item">
-            <a href="mailto:info@devstudio.com" class="menu-contacts__link">
-              info@devstudio.com
-            </a>
-          </li>
-        </ul>
+          </ul>
+        </div>
+        <div>
+          <ul class="menu-contacts">
+            <li class="menu-contacts__item">
+              <a href="tel.+380961111111" class="menu-contacts__phone"> +38 096 111 11 11 </a>
+            </li>
+            <li class="menu-contacts__item">
+              <a href="mailto:info@devstudio.com" class="menu-contacts__link"> info@devstudio.com </a>
+            </li>
+          </ul>
 
-        <ul class="mob-soc list">
-          <li class="mob-soc__item">
-            <a 
-            href="" class="mob-soc__link link"
-            target="_blank"
-            rel="noopener noreferrer nofollow"
-            >Instagram</a>
-          </li>
-          <li class="mob-soc__item">
-            <a 
-            href="" class="mob-soc__link link"
-            target="_blank"
-            rel="noopener noreferrer nofollow"
-            >Instagram</a>
-          </li>
-          <li class="mob-soc__item">
-            <a 
-            href="" class="mob-soc__link link"
-            target="_blank"
-            rel="noopener noreferrer nofollow"
-            >Instagram</a>
-          </li>
-          <li class="mob-soc__item">
-            <a 
-            href="" class="mob-soc__link link"
-            target="_blank"
-            rel="noopener noreferrer nofollow"
-            >Instagram</a>
-          </li>
-        </ul>
-</div>
-<script src="./js/mob.js"></script>
-    </div>
-    </header> 
+          <ul class="mob-soc list">
+            <li class="mob-soc__item">
+              <a href="" class="mob-soc__link link" target="_blank" rel="noopener noreferrer nofollow">Instagram</a>
+            </li>
+            <li class="mob-soc__item">
+              <a href="" class="mob-soc__link link" target="_blank" rel="noopener noreferrer nofollow">Instagram</a>
+            </li>
+            <li class="mob-soc__item">
+              <a href="" class="mob-soc__link link" target="_blank" rel="noopener noreferrer nofollow">Instagram</a>
+            </li>
+            <li class="mob-soc__item">
+              <a href="" class="mob-soc__link link" target="_blank" rel="noopener noreferrer nofollow">Instagram</a>
+            </li>
+          </ul>
+        </div>
+        <script src="./js/mob.js"></script>
+      </div>
+    </header>
+
     <!-- Main -->
-    <!-- <main>
+    <main>
       <section class="hero">
         <div class="container">
           <h1 class="hero__title">Ефективні рішення для вашого бізнесу</h1>
           <button type="button" class="button hero__button" data-modal-open>Замовити послугу</button>
         </div>
-      </section> -->
+      </section>
 
-      <!-- <section class="section advantages">
+      <section class="section advantages">
         <div class="container">
           <h2 class="section-title visually-hidden">Наші переваги</h2>
           <ul class="advantages__list">
@@ -185,6 +162,7 @@
           </ul>
         </div>
       </section>
+
       <section class="section about">
         <div class="container">
           <h2 class="section-title">Чим ми займаємося</h2>
@@ -217,7 +195,15 @@
           <h2 class="section-title">Наша команда</h2>
           <ul class="team-list">
             <li class="team-item">
-              <img src="images/team-member1sq.jpg" alt="Чоловік з бородою в окулярах та бордовій сорочці" width="270" />
+              <picture>
+                <source
+                  srcset="./images/igor-desk@1x.jpg 1x, ./images/igor-desk@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source srcset="./images/igor-tab@1x.jpg 1x, ./images/igor-tab@2x.jpg 2x" media="(min-width: 768px)" />
+                <source srcset="./images/igor-mob@1x.jpg 1x, ./images/igor-mob@2x.jpg 2x" media="(max-width: 767px)" />
+                <img src="./images/igor-desk@1x.jpg" alt="Чоловік з бородою в окулярах та бордовій сорочці" />
+              </picture>
               <div class="team-member-card">
                 <h3 class="team-member-name">Ігор Дем'яненко</h3>
                 <p lang="en" class="team-member-position">Product Designer</p>
@@ -254,7 +240,15 @@
               </div>
             </li>
             <li class="team-item">
-              <img src="images/team-member2sq.jpg" alt="Білява жінка в окулярах та чорному піджаку" width="270" />
+              <picture>
+                <source
+                  srcset="./images/igor-desk@1x.jpg 1x, ./images/igor-desk@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source srcset="./images/igor-tab@1x.jpg 1x, ./images/igor-tab@2x.jpg 2x" media="(min-width: 768px)" />
+                <source srcset="./images/igor-mob@1x.jpg 1x, ./images/igor-mob@2x.jpg 2x" media="(max-width: 767px)" />
+                <img src="./images/team-member2sq.jpg" alt="Білява жінка в окулярах та чорному піджаку" />
+              </picture>
               <div class="team-member-card">
                 <h3 class="team-member-name">Ольга Рєпіна</h3>
                 <p lang="en" class="team-member-position">Frontend Developer</p>
@@ -291,7 +285,15 @@
               </div>
             </li>
             <li class="team-item">
-              <img src="images/team-member3sq.jpg" alt="Чоловік в світло-блакитній сорочці" width="270" />
+              <picture>
+                <source
+                  srcset="./images/igor-desk@1x.jpg 1x, ./images/igor-desk@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source srcset="./images/igor-tab@1x.jpg 1x, ./images/igor-tab@2x.jpg 2x" media="(min-width: 768px)" />
+                <source srcset="./images/igor-mob@1x.jpg 1x, ./images/igor-mob@2x.jpg 2x" media="(max-width: 767px)" />
+                <img src="./images/team-member3sq.jpg" alt="Чоловік в світло-блакитній сорочці" />
+              </picture>
               <div class="team-member-card">
                 <h3 class="team-member-name">Микола Тарасов</h3>
                 <p lang="en" class="team-member-position">Marketing</p>
@@ -328,7 +330,15 @@
               </div>
             </li>
             <li class="team-item">
-              <img src="images/team-member4sq.jpg" alt="Чоловік в чорніій футболці та окулярах" width="270" />
+              <picture>
+                <source
+                  srcset="./images/igor-desk@1x.jpg 1x, ./images/igor-desk@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source srcset="./images/igor-tab@1x.jpg 1x, ./images/igor-tab@2x.jpg 2x" media="(min-width: 768px)" />
+                <source srcset="./images/igor-mob@1x.jpg 1x, ./images/igor-mob@2x.jpg 2x" media="(max-width: 767px)" />
+                <img src="./images/team-member4sq.jpg" alt="Чоловік в чорніій футболці та окулярах" />
+              </picture>
               <div class="team-member-card">
                 <h3 class="team-member-name">Михайло Єрмаков</h3>
                 <p lang="en" class="team-member-position">UI Designer</p>
@@ -367,6 +377,7 @@
           </ul>
         </div>
       </section>
+
       <section class="section">
         <div class="container">
           <h2 class="section-title">Постійні клієнти</h2>
@@ -416,9 +427,9 @@
           </ul>
         </div>
       </section>
-    </main> -->
+    </main>
     <!-- Footer -->
-    <!-- <footer>
+    <footer>
       <section class="footer">
         <div class="container container-footer">
           <div class="main-info-footer">
@@ -491,10 +502,10 @@
           </div>
         </div>
       </section>
-    </footer> -->
+    </footer>
 
     <!-- Modal window -->
-    <!-- <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="modal-exit" data-modal-close>
           <svg class="icon-exit">
@@ -541,7 +552,7 @@
               <textarea name="user-text" id="user-comment" class="input-message" placeholder="Введіть текст"></textarea>
             </div>
           </div>
-          
+
           <div class="modal-field modal-field-top">
             <input
               type="checkbox"
@@ -565,6 +576,6 @@
         </form>
       </div>
     </div>
-    <script src="./js/modal.js"></script> -->
+    <script src="./js/modal.js"></script>
   </body>
 </html>

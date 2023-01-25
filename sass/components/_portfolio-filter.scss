@@ -1,9 +1,14 @@
 .buttons-list {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: baseline;
   padding: 0;
   margin-bottom: 50px;
   gap: 8px;
+  
+  @include tablet {
+    justify-content: center;
+  }
 
   .button {
     @include transition-cubic((color, background-color, box-shadow));

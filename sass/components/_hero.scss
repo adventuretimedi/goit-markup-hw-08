@@ -1,9 +1,8 @@
 .hero {
   padding-top: 118px;
   padding-bottom: 118px;
-  max-width: 480px;
-  margin-right: auto;
-  margin-left: auto;
+  width: 100%;
+  margin: auto;
 
   text-align: center;
   background-color: $background-grey;
@@ -20,9 +19,8 @@
     background-image: $hero-gradient, url(../images/hero-bg-tab-2x-min.jpg);
     padding-top: 118px;
     padding-bottom: 118px;
-    max-width: 768px;
-    margin-right: auto;
-    margin-left: auto;
+    width: 100%;
+    margin: auto;
     text-align: center;
     background-color: $background-grey;
     background-repeat: no-repeat;
@@ -38,7 +36,8 @@
     background-image: $hero-gradient, url(../images/hero-bg.jpg);
     padding-top: 200px;
     padding-bottom: 200px;
-    max-width: 1200px;
+    margin: auto;
+    width: 100%;
     text-align: center;
     background-color: $background-grey;
     background-repeat: no-repeat;
@@ -49,24 +48,25 @@
             
         }
   }
+}
 
-  &__title {
-    // mob first
-    @include font-props(900, 26px, 1.6);
-    width: 360px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 30px;
-    color: $basic-white;
-    text-transform: uppercase;
-  }
-
+.hero__title {
+  // mob first
+  @include font-props(900, 26px, 1.6);
+  width: 360px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  color: $basic-white;
+  text-transform: uppercase;
+  
   @include tablet {
     @include font-props(900, 26px, 1.6);
     width: 360px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 30px;
+
     color: $basic-white;
     text-transform: uppercase;
   }
@@ -81,9 +81,9 @@
     color: $basic-white;
     text-transform: uppercase;
   }
+}
 
-
-&__button {
+.hero__button {
   @include font-props(700, 16px, 1.9);
   letter-spacing: 0.06em;
 
@@ -127,4 +127,4 @@
     color: $basic-white;
   }
 }
-}
+

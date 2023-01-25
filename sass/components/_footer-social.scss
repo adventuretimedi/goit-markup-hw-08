@@ -5,6 +5,11 @@
         margin-left: 0px;
         text-transform: uppercase;
         color: $basic-white;
+        text-align: center;
+
+        @include desktop {
+            text-align: start;
+        }
     }
 
     &-list {

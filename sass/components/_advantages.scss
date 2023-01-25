@@ -1,32 +1,51 @@
 .advantages {
-    &__list {
-        display: flex;
-        gap: 30px;
-        padding: 0;
-        margin: 0;
-        margin: 0px;
+  &__list {
+    padding: 0;
+    margin: 0;
+    margin: 0px;
+
+    @include tablet {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+  }
+
+  &__item {
+    @include tablet {
+      flex-basis: calc((100% - 30px) / 2);
     }
 
-    &__name {
-        font-size: 14px;
-        line-height: 1.14;
-        margin-top: 30px;
-        margin-bottom: 10px;
-        color: $title-text-color;
+    @include desktop {
+      flex-basis: calc((100% - 90px) / 4);
     }
+  }
 
-    &__icon-box {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 270px;
-        height: 120px;
-        border-radius: 4px;
-        background-color: #f5f4fa;
-    }
+  &__name {
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.2;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: $title-text-color;
 
-    &__text {
-        font-size: 14px;
-        line-height: 1.7;
+    @include tablet {
+      text-align: start;
     }
+  }
+
+  &__icon-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 120px;
+    border-radius: 4px;
+    background-color: #f5f4fa;
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 1.7;
+  }
 }
