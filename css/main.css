@@ -243,8 +243,9 @@ header {
 
 .menu-open {
   display: block;
-  display: block;
+  display: flex;
   margin-left: auto;
+  padding: 0;
   background-color: transparent;
   border: none;
 }
