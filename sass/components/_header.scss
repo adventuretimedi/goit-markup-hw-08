@@ -118,5 +118,19 @@ header {
     @include transition-cubic(fill);
     fill: $primary-text-color;
   }
+
+  &__icon--mail {
+    @include desktop {
+      width: 16px;
+      height: 12px;
+    }
+  }
+
+  &__icon--phone {
+    @include desktop {
+      width: 10px;
+      height: 16px;
+    }
+  }
 }
 

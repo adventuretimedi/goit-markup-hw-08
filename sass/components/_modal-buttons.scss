@@ -17,10 +17,7 @@
 
 .icon-exit {
     @include transition-cubic(fill);
-    position: absolute;
     fill: $absolute-black;
-    width: 18px;
-    height: 18px;
     
     &:hover,
     &:focus {
@@ -28,7 +25,10 @@
     }
 }
 
-
+.modal-exit:hover .icon-exit,
+.modal-exit:focus .icon-exit {
+    fill: $accent-color;
+}
 
 .modal-button {
     @include transition-cubic(background-color);
